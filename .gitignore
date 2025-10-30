@@ -43,10 +43,13 @@ BraTS2020_training_data/
 *.nii
 *.nii.gz
 *.h5
+*.hdf5          # ← ADD: Another HDF5 extension
 *.npy
 *.npz
 *.csv
 *.tsv
+*.mat           # ← ADD: MATLAB files (common in medical imaging)
+*.dcm           # ← ADD: DICOM files (if you ever work with raw DICOM)
 
 # MRI patches/cache
 patch_cache/
@@ -62,10 +65,14 @@ weights/
 *.pth
 *.pt
 *.ckpt
+*.safetensors  # ← ADD: New model weight format
 
 # Tensorboard
 runs/
 events.out.tfevents*
+
+# MLflow (if you use it later)
+mlruns/
 
 # -------------------------
 # OS / EDITOR FILES
@@ -77,10 +84,32 @@ Thumbs.db
 .vscode/
 *.code-workspace
 
+# PyCharm
+.idea/          # ← ADD: If anyone uses PyCharm
+
 # -------------------------
 # ENV / CREDENTIALS
 # -------------------------
 *.env
-*.json
-*.cfg
-*.config
+# *.json        # ← COMMENT OUT: You might need config JSONs in version control
+# *.cfg         # ← COMMENT OUT: You might need config files
+# *.config      # ← COMMENT OUT: Too broad, could exclude important configs
+
+# Instead, be specific about sensitive files:
+secrets.json
+credentials.json
+api_keys.json
+.env.local
+
+# -------------------------
+# DOCUMENTATION BUILD
+# -------------------------
+docs/_build/
+site/
+
+# -------------------------
+# TESTING
+# -------------------------
+.pytest_cache/
+.coverage
+htmlcov/

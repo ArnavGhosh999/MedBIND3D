@@ -1,0 +1,86 @@
+# -------------------------
+# PYTHON
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+*.log
+
+# Virtual env
+venv/
+env/
+*.env
+*.venv
+.venv/
+
+# Python cache
+*.pickle
+*.pkl
+*.pt
+*.pth
+
+# -------------------------
+# JUPYTER NOTEBOOK
+# -------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Jupyter runtime
+.jupyter/
+.python_history
+
+# -------------------------
+# DATA & LARGE FILES
+# -------------------------
+# Medical datasets (do not upload)
+data/
+datasets/
+BraTS2020_training_data/
+*.nii
+*.nii.gz
+*.h5
+*.npy
+*.npz
+*.csv
+*.tsv
+
+# MRI patches/cache
+patch_cache/
+cache/
+tmp/
+
+# -------------------------
+# MODEL ARTIFACTS
+# -------------------------
+outputs/
+checkpoints/
+weights/
+*.pth
+*.pt
+*.ckpt
+
+# Tensorboard
+runs/
+events.out.tfevents*
+
+# -------------------------
+# OS / EDITOR FILES
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# -------------------------
+# ENV / CREDENTIALS
+# -------------------------
+*.env
+*.json
+*.cfg
+*.config

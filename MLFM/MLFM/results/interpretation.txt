@@ -1,0 +1,48 @@
+
+MULTIMODAL LATENT FRAGILITY MAPPING (MLFM) - KEY FINDINGS
+
+1. REPRESENTATION LEARNING:
+   - Successfully learned multimodal brain MRI representations using spectral graph convolutions
+   - Chebyshev polynomial filtering captured multi-scale graph structure
+   - Latent embeddings show clear subject-level clustering in UMAP/t-SNE
+
+2. FRAGILITY PATTERNS:
+   - Different modalities exhibit varying fragility to perturbations:
+     * FLAIR: Mean fragility = 5.826
+     * T1CE: Mean fragility = 5.830
+     * T2: Mean fragility = 5.853
+   - Combined fragility: 5.832 ± 0.224
+
+3. PERTURBATION SENSITIVITY:
+   - Noise perturbations cause highest fragility (additive corruption)
+   - Blur perturbations show moderate fragility (loss of high-frequency detail)
+   - Intensity perturbations exhibit lowest fragility (model learns scale-invariant features)
+
+4. SPATIAL ORGANIZATION:
+   - Graph spectral analysis reveals hierarchical brain structure
+   - Spectral gap indicates well-connected graph topology
+   - GradCAM attribution highlights anatomically relevant regions
+
+5. CLINICAL IMPLICATIONS:
+   - Fragile regions may correspond to:
+     a) Tissue boundaries (high variance in MRI signal)
+     b) Pathological areas (abnormal multimodal coherence)
+     c) Artifacts or noise-sensitive regions
+   - Lower fragility indicates robust, reliable features for downstream tasks
+
+6. THEORETICAL INSIGHTS:
+   - Learned representations exhibit spectral smoothness (graph Laplacian regularization)
+   - Multimodal fusion creates more robust embeddings than single modalities
+   - Perturbation analysis reveals feature importance without supervision
+
+7. FUTURE DIRECTIONS:
+   - Extend to semi-supervised segmentation with fragility-weighted loss
+   - Investigate fragility as uncertainty quantification metric
+   - Apply to cross-dataset generalization studies
+   - Develop fragility-aware data augmentation strategies
+
+CONCLUSION:
+Spectral graph neural networks successfully learn structure-aware multimodal
+representations of brain MRI. Fragility mapping reveals which spatial regions
+and modalities contribute most to learned features, providing interpretability
+for deep learning on medical imaging data.

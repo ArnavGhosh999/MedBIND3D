@@ -8,10 +8,10 @@ MULTIMODAL LATENT FRAGILITY MAPPING (MLFM) - KEY FINDINGS
 
 2. FRAGILITY PATTERNS:
    - Different modalities exhibit varying fragility to perturbations:
-     * FLAIR: Mean fragility = 5.826
-     * T1CE: Mean fragility = 5.830
-     * T2: Mean fragility = 5.853
-   - Combined fragility: 5.832 ± 0.224
+     * FLAIR: Mean fragility = 5.326
+     * T1CE: Mean fragility = 5.338
+     * T2: Mean fragility = 5.325
+   - Combined fragility: 5.329 ± 0.305
 
 3. PERTURBATION SENSITIVITY:
    - Noise perturbations cause highest fragility (additive corruption)

@@ -1,10 +1,8 @@
 <div align="center">
 
-<b align="center">MedBIND3D</b> 
+<h1 align="center">MedBIND3D</h1> 
 
 3D Swin Transformer for Brain Tumor Segmentation
-
-Actionable guide to setup, run notebooks, train, infer, and evaluate.
 
 </div>
 

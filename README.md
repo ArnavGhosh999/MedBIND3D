@@ -22,14 +22,17 @@ MedBIND3D is a 3D medical image segmentation project focused on multi-class glio
   - **[data_diagnostic.ipynb](notebooks/data_diagnostic.ipynb)** — Diagnostic checks on preprocessed data: validate cropping, verify normalization ranges, check for NaNs/Infs, and confirm batch loading correctness before training.
 - **Explainability:** [explainability_maps](explainability_maps)
 - **Anatomical factorization:** [Anatomical](Anatomical)
-  - [anatomical.ipynb](Anatomical/anatomical.ipynb)
+  - Decomposes multimodal brain MRI volumes into interpretable anatomical components without using any labels or segmentations.
   - [anatomical_factorization.ipynb](Anatomical/anatomical_factorization.ipynb)
 - **LOFE experiments:** [LOFE](LOFE)
+  - (Latent Orthogonal Feature Extraction): Learns a compact latent space where different MRI modalities are forced to encode orthogonal, non-overlapping information.
   - [Week2_LOFE_PK_Encoder_Modality_Factorization.ipynb](LOFE/Week2_LOFE_PK_Encoder_Modality_Factorization.ipynb)
 - **MLFM experiments:** [MLFM](MLFM)
+  - (Multimodal Latent Fragility Mapping): Identifies which brain regions are most sensitive to changes in each MRI modality by measuring latent-space perturbations.
   - [MLFM_training.ipynb](MLFM/MLFM_training.ipynb)
   - [figures](MLFM/MLFM/figures), [results](MLFM/MLFM/results)
 - **Protocol redundancy:** [Protocol_Redundancy](Protocol_Redundancy)
+  - Quantifies how much information different MRI sequences share to identify redundant or unnecessary imaging protocols.
   - [protocol_redundancy_analysis.ipynb](Protocol_Redundancy/protocol_redundancy_analysis.ipynb)
 - **Results and reports:** [results/week5](results/week5)
   - [report_week5.md](results/week5/report_week5.md)

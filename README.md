@@ -17,7 +17,6 @@ MedBIND3D is a 3D medical image segmentation project focused on multi-class glio
   - **[Preprocessing.ipynb](notebooks/Preprocessing.ipynb)** — Load BraTS-2020 NIfTI files, apply skull-stripping validation, perform z-score normalization and intensity clipping, execute center-cropping to 128×128×128, and generate preprocessed volumes ready for training.
   - **[Training.ipynb](notebooks/Training.ipynb)** — Comprehensive training pipeline: data loading, model initialization, loss function setup (Dice + CE), optimizer configuration (AdamW), and epoch-by-epoch training with validation loops. Includes checkpointing and metrics tracking.
   - **[Evaluation.ipynb](notebooks/Evaluation.ipynb)** — Post-training analysis: compute Dice, IoU, Hausdorff-95, sensitivity, specificity, and precision across validation set. Generate statistical summaries and per-class performance breakdowns.
-  - **[Week6_InferenceAndReport.ipynb](notebooks/Week6_InferenceAndReport.ipynb)** — Run inference on test/validation sets, post-process predictions (removing disconnected components, morphological operations), generate prediction overlays, and compile final markdown reports with performance tables.
   - **[DataExploration.ipynb](notebooks/DataExploration.ipynb)** — Exploratory data analysis: visualize sample MRI slices across modalities (T1, T1ce, T2, FLAIR), analyze tumor distribution, compute intensity statistics, and document dataset characteristics.
   - **[data_diagnostic.ipynb](notebooks/data_diagnostic.ipynb)** — Diagnostic checks on preprocessed data: validate cropping, verify normalization ranges, check for NaNs/Infs, and confirm batch loading correctness before training.
 - **Explainability:** [explainability_maps](explainability_maps)
@@ -69,12 +68,7 @@ pip install torch monai nibabel SimpleITK numpy scipy scikit-image pandas matplo
 - Execute [Training.ipynb](notebooks/Training.ipynb) to train the 3D Swin Transformer model.
 - Training outputs (metrics, curves, checkpoints) are saved to [plots](plots) and [results](results).
 
-### 4) Inference & Reporting
-
-- Use [Week6_InferenceAndReport.ipynb](notebooks/Week6_InferenceAndReport.ipynb) to run inference on validation/test sets and generate summaries.
-- Visualizations and overlays are saved under [plots/week5](plots/week5) and HTML interactive views (e.g., [07_interactive_dice_hausdorff.html](plots/week5/07_interactive_dice_hausdorff.html)).
-
-### 5) Evaluation & Explainability
+### 4) Evaluation & Explainability
 
 - Evaluate metrics via [Evaluation.ipynb](notebooks/Evaluation.ipynb) and store summaries in [results/week5](results/week5).
 - Explore Grad-CAM, attention maps, and factorization analyses via [explainability_maps](explainability_maps), [Anatomical](Anatomical), and [MLFM](MLFM).
@@ -85,12 +79,8 @@ pip install torch monai nibabel SimpleITK numpy scipy scikit-image pandas matplo
 2. **Exploration (optional):** Run [DataExploration.ipynb](notebooks/DataExploration.ipynb) and [data_diagnostic.ipynb](notebooks/data_diagnostic.ipynb) to inspect dataset characteristics.
 3. **Preprocessing:** Normalize and crop volumes using [Preprocessing.ipynb](notebooks/Preprocessing.ipynb).
 4. **Training:** Train model with [Training.ipynb](notebooks/Training.ipynb).
-5. **Inference & Reporting:** Generate predictions and reports via [Week6_InferenceAndReport.ipynb](notebooks/Week6_InferenceAndReport.ipynb).
-6. **Evaluation:** Compute comprehensive metrics and visualizations with [Evaluation.ipynb](notebooks/Evaluation.ipynb), outputs in [plots](plots) and [results](results).
+5. **Evaluation:** Compute comprehensive metrics and visualizations with [Evaluation.ipynb](notebooks/Evaluation.ipynb), outputs in [plots](plots) and [results](results).
 
-## Notes on Future `src/` Scripts
-
-When you're ready to move workflows from notebooks into production scripts, you can implement modules for dataset handling, model definition, training loops, inference utilities, and metric computations.
 
 ## Results & Reports
 

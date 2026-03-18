@@ -59,6 +59,8 @@ tmp/
 # -------------------------
 # MODEL ARTIFACTS
 # -------------------------
+medclipsam/MedCLIPP-SAMv2/
+
 outputs/
 checkpoints/
 weights/
@@ -113,3 +115,5 @@ site/
 .pytest_cache/
 .coverage
 htmlcov/
+
+

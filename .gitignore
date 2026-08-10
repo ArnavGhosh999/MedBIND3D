@@ -1,4 +1,65 @@
 # -------------------------
+# MEDICAL DATA (never push)
+# -------------------------
+*.nii
+*.nii.gz
+*.dcm
+*.h5
+*.hdf5
+*.mat
+BraTS2020_training_data/
+data/
+datasets/
+
+# -------------------------
+# NUMPY / CACHE FILES
+# -------------------------
+*.npy
+*.npz
+*.pkl
+*.pickle
+patch_cache/
+cache/
+tmp/
+adapter_features*/
+prob_cache/
+
+# -------------------------
+# MODEL WEIGHTS (too large)
+# -------------------------
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+nnunet_results/
+nnunet_raw/
+nnunet_preprocessed/
+checkpoints/
+weights/
+
+# -------------------------
+# OUTPUT FOLDERS (large)
+# -------------------------
+medbind3d_v8_outputs/
+medbind3d_v9_outputs/
+medbind3d_v10_outputs/
+medbind3d_v11_outputs/
+medbind3d_v12_outputs/
+medbind3d_v13_outputs/
+medbind3d_v14_outputs/
+medbind3d_v15_outputs/
+medbind3d_v16_outputs/
+medbind3d_v17_outputs/
+reconstruction_models/
+
+# -------------------------
+# KEEP THESE (override above)
+# -------------------------
+!medbind3d_figures/
+!medbind3d_figures/*.png
+!medbind3d_v8_results.csv
+
+# -------------------------
 # PYTHON
 # -------------------------
 __pycache__/
@@ -9,111 +70,43 @@ __pycache__/
 *.egg-info/
 *.egg
 *.log
-
-# Virtual env
 venv/
 env/
-*.env
-*.venv
 .venv/
 
-# Python cache
-*.pickle
-*.pkl
-*.pt
-*.pth
-
 # -------------------------
-# JUPYTER NOTEBOOK
+# JUPYTER
 # -------------------------
 .ipynb_checkpoints/
 *.ipynb_checkpoints/
-
-# Jupyter runtime
 .jupyter/
-.python_history
 
 # -------------------------
-# DATA & LARGE FILES
-# -------------------------
-# Medical datasets (do not upload)
-data/
-datasets/
-BraTS2020_training_data/
-*.nii
-*.nii.gz
-*.h5
-*.hdf5          # ← ADD: Another HDF5 extension
-*.npy
-*.npz
-*.csv
-*.tsv
-*.mat           # ← ADD: MATLAB files (common in medical imaging)
-*.dcm           # ← ADD: DICOM files (if you ever work with raw DICOM)
-
-# MRI patches/cache
-patch_cache/
-cache/
-tmp/
-
-# -------------------------
-# MODEL ARTIFACTS
-# -------------------------
-medclipsam/MedCLIPP-SAMv2/
-
-outputs/
-checkpoints/
-weights/
-*.pth
-*.pt
-*.ckpt
-*.safetensors  # ← ADD: New model weight format
-
-# Tensorboard
-runs/
-events.out.tfevents*
-
-# MLflow (if you use it later)
-mlruns/
-
-# -------------------------
-# OS / EDITOR FILES
+# OS / EDITOR
 # -------------------------
 .DS_Store
 Thumbs.db
-
-# VSCode
 .vscode/
 *.code-workspace
-
-# PyCharm
-.idea/          # ← ADD: If anyone uses PyCharm
+.idea/
 
 # -------------------------
-# ENV / CREDENTIALS
+# CREDENTIALS
 # -------------------------
-*.env
-# *.json        # ← COMMENT OUT: You might need config JSONs in version control
-# *.cfg         # ← COMMENT OUT: You might need config files
-# *.config      # ← COMMENT OUT: Too broad, could exclude important configs
-
-# Instead, be specific about sensitive files:
 secrets.json
 credentials.json
 api_keys.json
+.env
 .env.local
 
 # -------------------------
-# DOCUMENTATION BUILD
+# MISC
 # -------------------------
-docs/_build/
-site/
-
-# -------------------------
-# TESTING
-# -------------------------
+runs/
+events.out.tfevents*
+mlruns/
 .pytest_cache/
 .coverage
 htmlcov/
-
-
+docs/_build/
+site/
